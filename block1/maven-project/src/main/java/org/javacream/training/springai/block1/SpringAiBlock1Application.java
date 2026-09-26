@@ -1,29 +1,35 @@
 package org.javacream.training.springai.block1;
 
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.ConfigurableApplicationContext;
 
-@SpringBootApplication
 public class SpringAiBlock1Application {
-    public static void main(String[] args) {
-        SpringApplication.run(SpringAiBlock1Application.class, args);
-    }
 
-    @Bean
-    CommandLineRunner demo(ChatClient.Builder builder) {
-        return args -> {
+    public static void main(String[] args) {
+        ConfigurableApplicationContext context =
+                SpringApplication.run(SpringAiBlock1Configuration.class, args);
+
+        try {
+            ChatClient.Builder builder = context.getBean(ChatClient.Builder.class);
             ChatClient client = builder.build();
+
             var response = client.prompt()
                     .user("Erkläre Spring AI für einen Java-Entwickler in drei kurzen Sätzen.")
                     .call()
                     .chatResponse();
+
             System.out.println("\n=== Antwort ===");
             System.out.println(response.getResult().getOutput().getText());
-            System.out.println("\n=== Metadaten ===");
-            System.out.println(response.getMetadata());
-        };
+
+            var usage = response.getMetadata().getUsage();
+
+            System.out.println("\n=== Token-Nutzung ===");
+            System.out.println("Prompt-Tokens:    " + usage.getPromptTokens());
+            System.out.println("Completion-Tokens: " + usage.getCompletionTokens());
+            System.out.println("Tokens gesamt:    " + usage.getTotalTokens());
+        } finally {
+            context.close();
+        }
     }
 }

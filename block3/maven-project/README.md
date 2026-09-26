@@ -8,19 +8,35 @@ Advisors und Conversation Memory
 
 - Java 21
 - Maven 3.9+
-- Umgebungsvariable `OPENAI_API_KEY`
+
+## Lokales Modell mit Ollama
+
+Das Projekt verwendet standardmäßig Ollama; ein Cloud-API-Key ist nicht erforderlich.
+
+Vor dem ersten Start Ollama installieren und starten, danach einmalig:
+
+```powershell
+ollama pull llama3.2
+ollama pull nomic-embed-text
+```
+
+Chat-Modell: `llama3.2`  
+Embedding-Modell: `nomic-embed-text`  
+Endpunkt: `http://localhost:11434`
 
 ## Start
 
 ```bash
-export OPENAI_API_KEY="..."
+ollama pull llama3.2
+ollama pull nomic-embed-text
 mvn spring-boot:run
 ```
 
 Unter Windows PowerShell:
 
 ```powershell
-$env:OPENAI_API_KEY="..."
+ollama pull llama3.2
+ollama pull nomic-embed-text
 mvn spring-boot:run
 ```
 

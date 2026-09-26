@@ -13,7 +13,7 @@ Die Teilnehmenden können AI-Ausgaben mit geeigneten Kriterien evaluieren, techn
 - Java 21 und grundlegende Java-Kenntnisse
 - Spring Boot und Dependency Injection sind bekannt
 - Maven-Grundkenntnisse
-- Für Modellaufrufe: gültiger `OPENAI_API_KEY`
+- Für Modellaufrufe: lokal gestarteter Ollama-Dienst
 - Vorwissen aus den vorhergehenden Blöcken, soweit fachlich erforderlich
 
 ## Kerninhalte

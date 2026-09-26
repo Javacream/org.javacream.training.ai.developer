@@ -13,9 +13,11 @@ Technischer Zielstand:
 - Spring Boot 4.0.0
 - Java 21
 
-Für Modellaufrufe wird `OPENAI_API_KEY` als Umgebungsvariable erwartet.
+Für Modellaufrufe wird standardmäßig Ollama lokal verwendet; ein Cloud-API-Key ist nicht erforderlich.
 
 Hinweis: Die Dateien wurden strukturell erzeugt und auf konsistente Imports/API-Verwendung ausgerichtet. In der Ausführungsumgebung stand Maven nicht zur Verfügung; daher konnte hier kein vollständiger `mvn test`-Build gegen Maven Central ausgeführt werden.
 
 Maven GroupId: `org.javacream.training`
 Java-Basispaket: `org.javacream.training.springai`
+
+Standardmodelle: Chat `llama3.2`, Embeddings `nomic-embed-text` über Ollama.
