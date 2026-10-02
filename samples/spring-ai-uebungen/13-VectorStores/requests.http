@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:8093
+
+### AddDocumentsController
+POST {{baseUrl}}/api/add-documents
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### SimilaritySearchController
+POST {{baseUrl}}/api/similarity-search
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### SearchRequestController
+POST {{baseUrl}}/api/search-request
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### VectorMetadataController
+POST {{baseUrl}}/api/vector-metadata
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### MetadataFilterController
+POST {{baseUrl}}/api/metadata-filter
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### DeleteDocumentsController
+POST {{baseUrl}}/api/delete-documents
+Content-Type: text/plain; charset=UTF-8
+
+HIER-DOKUMENT-ID-EINTRAGEN

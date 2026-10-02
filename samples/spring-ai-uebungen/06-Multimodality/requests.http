@@ -1,0 +1,19 @@
+@baseUrl = http://localhost:8086
+
+### ImageAnalysisController
+POST {{baseUrl}}/api/image-analysis
+# Multipart und Pflichtparameter über Swagger UI angeben.
+
+### MediaResourceController
+POST {{baseUrl}}/api/media-resource
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### MediaUriController
+POST {{baseUrl}}/api/media-uri
+# Multipart und Pflichtparameter über Swagger UI angeben.
+
+### MultipleMediaController
+POST {{baseUrl}}/api/multiple-media
+# Multipart und Pflichtparameter über Swagger UI angeben.

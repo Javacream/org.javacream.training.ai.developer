@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:8088
+
+### ChatMemoryController
+POST {{baseUrl}}/api/chat-memory
+Content-Type: text/plain; charset=UTF-8
+
+Mein Name ist Ada.
+
+### ConversationMemoryController
+POST {{baseUrl}}/api/conversation-memory
+Content-Type: text/plain; charset=UTF-8
+
+Mein Name ist Ada.
+
+### MessageWindowController
+POST {{baseUrl}}/api/message-window
+Content-Type: text/plain; charset=UTF-8
+
+Mein Name ist Ada.
+
+### MemoryAdvisorController
+POST {{baseUrl}}/api/memory-advisor
+Content-Type: text/plain; charset=UTF-8
+
+Mein Name ist Ada.
+
+### InMemoryRepositoryController
+POST {{baseUrl}}/api/in-memory-repository
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### PersistentMemoryController
+POST {{baseUrl}}/api/persistent-memory
+Content-Type: text/plain; charset=UTF-8
+
+Mein Name ist Ada.

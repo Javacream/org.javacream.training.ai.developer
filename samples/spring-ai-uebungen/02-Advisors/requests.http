@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:8082
+
+### LoggingAdvisorController
+POST {{baseUrl}}/api/logging-advisor
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### AdvisorParameterController
+POST {{baseUrl}}/api/advisor-parameter
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### AdvisorChainController
+POST {{baseUrl}}/api/advisor-chain
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### CustomCallAdvisorController
+POST {{baseUrl}}/api/custom-call-advisor
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### AdvisorContextController
+POST {{baseUrl}}/api/advisor-context
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### CustomStreamAdvisorController
+POST {{baseUrl}}/api/custom-stream-advisor
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.

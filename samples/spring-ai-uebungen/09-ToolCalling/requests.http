@@ -1,0 +1,61 @@
+@baseUrl = http://localhost:8089
+
+### SimpleToolController
+POST {{baseUrl}}/api/simple-tool
+Content-Type: text/plain; charset=UTF-8
+
+Welches Datum ist heute? Nutze das Tool.
+
+### ToolParametersController
+POST {{baseUrl}}/api/tool-parameters
+Content-Type: text/plain; charset=UTF-8
+
+Addiere 17 und 25 mithilfe des Tools.
+
+### ToolContextController
+POST {{baseUrl}}/api/tool-context
+Content-Type: text/plain; charset=UTF-8
+
+Wie lautet meine Tenant-ID? Nutze das Tool.
+
+### ToolCallbackController
+POST {{baseUrl}}/api/tool-callback
+Content-Type: text/plain; charset=UTF-8
+
+Multipliziere 7 mit 8 mithilfe des Tools.
+
+### ToolCallbackProviderController
+POST {{baseUrl}}/api/tool-callback-provider
+Content-Type: text/plain; charset=UTF-8
+
+Addiere 4 und 5 und nenne das heutige Datum. Nutze die Tools.
+
+### ReturnDirectController
+POST {{baseUrl}}/api/return-direct
+Content-Type: text/plain; charset=UTF-8
+
+Gib mir den Trainingscode mithilfe des Tools.
+
+### ToolErrorHandlingController
+POST {{baseUrl}}/api/tool-error-handling
+Content-Type: text/plain; charset=UTF-8
+
+Rufe das fail-Tool auf.
+
+### ToolCallingAdvisorController
+POST {{baseUrl}}/api/tool-calling-advisor
+Content-Type: text/plain; charset=UTF-8
+
+Addiere 17 und 25 und nenne das heutige Datum. Nutze die Tools.
+
+### UserControlledToolController
+POST {{baseUrl}}/api/user-controlled-tool
+Content-Type: text/plain; charset=UTF-8
+
+Addiere 17 und 25 und nenne das heutige Datum. Nutze die Tools.
+
+### ToolSearchController
+POST {{baseUrl}}/api/tool-search
+Content-Type: text/plain; charset=UTF-8
+
+Addiere 17 und 25 mithilfe des passenden Tools.

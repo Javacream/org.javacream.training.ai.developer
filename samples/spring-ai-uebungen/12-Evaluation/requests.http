@@ -1,0 +1,19 @@
+@baseUrl = http://localhost:8092
+
+### RelevancyEvaluatorController
+POST {{baseUrl}}/api/relevancy-evaluator
+Content-Type: application/json
+
+{"question":"Was nutzt das Seminar?","context":"Das Seminar nutzt Ollama.","answer":"Ollama."}
+
+### FactCheckingEvaluatorController
+POST {{baseUrl}}/api/fact-checking-evaluator
+Content-Type: application/json
+
+{"question":"Was nutzt das Seminar?","context":"Das Seminar nutzt Ollama.","answer":"Ollama."}
+
+### CustomEvaluatorController
+POST {{baseUrl}}/api/custom-evaluator
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.

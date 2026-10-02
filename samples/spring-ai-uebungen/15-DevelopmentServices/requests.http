@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:8095
+
+### DockerComposeController
+POST {{baseUrl}}/api/docker-compose
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### ServiceConnectionController
+POST {{baseUrl}}/api/service-connection
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.

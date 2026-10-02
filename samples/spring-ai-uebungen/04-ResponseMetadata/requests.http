@@ -1,0 +1,19 @@
+@baseUrl = http://localhost:8084
+
+### UsageMetadataController
+POST {{baseUrl}}/api/usage-metadata
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### GenerationMetadataController
+POST {{baseUrl}}/api/generation-metadata
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### ResponseMetadataController
+POST {{baseUrl}}/api/response-metadata
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.

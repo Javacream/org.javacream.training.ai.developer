@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:8085
+
+### BeanOutputController
+POST {{baseUrl}}/api/bean-output
+Content-Type: text/plain; charset=UTF-8
+
+Nenne drei Filme von Tom Hanks.
+
+### ListOutputController
+POST {{baseUrl}}/api/list-output
+Content-Type: text/plain; charset=UTF-8
+
+Nenne fünf europäische Länder.
+
+### MapOutputController
+POST {{baseUrl}}/api/map-output
+Content-Type: text/plain; charset=UTF-8
+
+Nenne Hauptstadt und Einwohnerzahl für Deutschland als Map.
+
+### GenericOutputController
+POST {{baseUrl}}/api/generic-output
+Content-Type: text/plain; charset=UTF-8
+
+Nenne je drei Filme von Tom Hanks und Meryl Streep.
+
+### SchemaValidationController
+POST {{baseUrl}}/api/schema-validation
+Content-Type: text/plain; charset=UTF-8
+
+Nenne drei Filme von Tom Hanks.
+
+### ProviderStructuredOutputController
+POST {{baseUrl}}/api/provider-structured-output
+Content-Type: text/plain; charset=UTF-8
+
+Nenne drei Filme von Tom Hanks.

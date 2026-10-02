@@ -1,0 +1,31 @@
+@baseUrl = http://localhost:8090
+
+### McpClientController
+GET {{baseUrl}}/api/mcp-client
+
+### McpResourcesController
+GET {{baseUrl}}/api/mcp-resources
+
+### McpPromptsController
+POST {{baseUrl}}/api/mcp-prompts
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### McpToolsController
+POST {{baseUrl}}/api/mcp-tools
+Content-Type: text/plain; charset=UTF-8
+
+Addiere 11 und 12 mithilfe des MCP-Tools.
+
+### McpServerToolsController
+GET {{baseUrl}}/api/mcp-server-tools
+
+### McpServerResourcesController
+GET {{baseUrl}}/api/mcp-server-resources
+
+### McpAnnotationsController
+POST {{baseUrl}}/api/mcp-annotations
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.

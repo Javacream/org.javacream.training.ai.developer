@@ -1,0 +1,223 @@
+[
+  {
+    "project": "01-ChatClient",
+    "package": "org.javacream.training.spring.ai.chatclient",
+    "port": 8081,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/chatclient.html",
+    "controllers": [
+      "SimpleChatController",
+      "FluentApiController",
+      "ChatResponseController",
+      "EntityResponseController",
+      "StreamingChatController",
+      "PromptParameterController",
+      "MessageMetadataController",
+      "ChatClientDefaultsController",
+      "ChatClientMutationController"
+    ]
+  },
+  {
+    "project": "02-Advisors",
+    "package": "org.javacream.training.spring.ai.advisors",
+    "port": 8082,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/advisors.html",
+    "controllers": [
+      "LoggingAdvisorController",
+      "AdvisorParameterController",
+      "AdvisorChainController",
+      "CustomCallAdvisorController",
+      "CustomStreamAdvisorController",
+      "AdvisorContextController"
+    ]
+  },
+  {
+    "project": "03-Prompts",
+    "package": "org.javacream.training.spring.ai.prompts",
+    "port": 8083,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/prompt.html",
+    "controllers": [
+      "PromptController",
+      "MessageRolesController",
+      "PromptTemplateController",
+      "SystemPromptTemplateController",
+      "ResourcePromptController",
+      "TemplateRendererController"
+    ]
+  },
+  {
+    "project": "04-ResponseMetadata",
+    "package": "org.javacream.training.spring.ai.responsemetadata",
+    "port": 8084,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/chatmodel.html#ChatResponse",
+    "controllers": [
+      "UsageMetadataController",
+      "GenerationMetadataController",
+      "ResponseMetadataController"
+    ]
+  },
+  {
+    "project": "05-StructuredOutput",
+    "package": "org.javacream.training.spring.ai.structuredoutput",
+    "port": 8085,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/structured-output.html",
+    "controllers": [
+      "BeanOutputController",
+      "ListOutputController",
+      "MapOutputController",
+      "GenericOutputController",
+      "SchemaValidationController",
+      "ProviderStructuredOutputController"
+    ]
+  },
+  {
+    "project": "06-Multimodality",
+    "package": "org.javacream.training.spring.ai.multimodality",
+    "port": 8086,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/multimodality.html",
+    "controllers": [
+      "ImageAnalysisController",
+      "MediaResourceController",
+      "MediaUriController",
+      "MultipleMediaController"
+    ]
+  },
+  {
+    "project": "07-Models",
+    "package": "org.javacream.training.spring.ai.models",
+    "port": 8087,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/index.html",
+    "controllers": [
+      "ChatModelController",
+      "ChatOptionsController",
+      "ModelOptionsController",
+      "EmbeddingModelController",
+      "ImageModelController",
+      "TranscriptionModelController",
+      "SpeechModelController",
+      "ModerationModelController"
+    ]
+  },
+  {
+    "project": "08-ChatMemory",
+    "package": "org.javacream.training.spring.ai.chatmemory",
+    "port": 8088,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/chat-memory.html",
+    "controllers": [
+      "ChatMemoryController",
+      "ConversationMemoryController",
+      "MessageWindowController",
+      "InMemoryRepositoryController",
+      "PersistentMemoryController",
+      "MemoryAdvisorController"
+    ]
+  },
+  {
+    "project": "09-ToolCalling",
+    "package": "org.javacream.training.spring.ai.toolcalling",
+    "port": 8089,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/tools.html",
+    "controllers": [
+      "SimpleToolController",
+      "ToolParametersController",
+      "ToolContextController",
+      "ToolCallbackController",
+      "ToolCallbackProviderController",
+      "ReturnDirectController",
+      "ToolErrorHandlingController",
+      "ToolCallingAdvisorController",
+      "UserControlledToolController",
+      "ToolSearchController"
+    ]
+  },
+  {
+    "project": "10-MCP",
+    "package": "org.javacream.training.spring.ai.mcp",
+    "port": 8090,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html",
+    "controllers": [
+      "McpClientController",
+      "McpToolsController",
+      "McpResourcesController",
+      "McpPromptsController",
+      "McpServerToolsController",
+      "McpServerResourcesController",
+      "McpAnnotationsController"
+    ]
+  },
+  {
+    "project": "11-RAG",
+    "package": "org.javacream.training.spring.ai.rag",
+    "port": 8091,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/retrieval-augmented-generation.html",
+    "controllers": [
+      "SimpleRagController",
+      "QuestionAnswerAdvisorController",
+      "DocumentRetrievalController",
+      "QueryTransformationController",
+      "QueryExpansionController",
+      "DocumentReaderController",
+      "DocumentTransformerController",
+      "DocumentWriterController",
+      "EtlPipelineController"
+    ]
+  },
+  {
+    "project": "12-Evaluation",
+    "package": "org.javacream.training.spring.ai.evaluation",
+    "port": 8092,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/testing.html",
+    "controllers": [
+      "RelevancyEvaluatorController",
+      "FactCheckingEvaluatorController",
+      "CustomEvaluatorController"
+    ]
+  },
+  {
+    "project": "13-VectorStores",
+    "package": "org.javacream.training.spring.ai.vectorstores",
+    "port": 8093,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/vectordbs/apache-cassandra.html",
+    "controllers": [
+      "AddDocumentsController",
+      "SimilaritySearchController",
+      "SearchRequestController",
+      "VectorMetadataController",
+      "MetadataFilterController",
+      "DeleteDocumentsController"
+    ]
+  },
+  {
+    "project": "14-Observability",
+    "package": "org.javacream.training.spring.ai.observability",
+    "port": 8094,
+    "reference": "https://docs.spring.io/spring-ai/reference/observability/index.html",
+    "controllers": [
+      "ChatClientObservabilityController",
+      "ModelObservabilityController",
+      "AdvisorObservabilityController",
+      "VectorStoreObservabilityController",
+      "PromptLoggingController"
+    ]
+  },
+  {
+    "project": "15-DevelopmentServices",
+    "package": "org.javacream.training.spring.ai.developmentservices",
+    "port": 8095,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/docker-compose.html",
+    "controllers": [
+      "DockerComposeController",
+      "ServiceConnectionController"
+    ]
+  },
+  {
+    "project": "16-Testcontainers",
+    "package": "org.javacream.training.spring.ai.testcontainers",
+    "port": 8096,
+    "reference": "https://docs.spring.io/spring-ai/reference/api/testcontainers.html",
+    "controllers": [
+      "TestcontainerServiceController",
+      "DynamicConnectionController",
+      "IntegrationTestController"
+    ]
+  }
+]
