@@ -1,0 +1,49 @@
+@baseUrl = http://localhost:8087
+
+### ChatModelController
+POST {{baseUrl}}/api/chat-model
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### ChatOptionsController
+POST {{baseUrl}}/api/chat-options
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### ModelOptionsController
+POST {{baseUrl}}/api/model-options
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### EmbeddingModelController
+POST {{baseUrl}}/api/embedding-model
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### ImageModelController
+POST {{baseUrl}}/api/image-model
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### TranscriptionModelController
+POST {{baseUrl}}/api/transcription-model
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### SpeechModelController
+POST {{baseUrl}}/api/speech-model
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### ModerationModelController
+POST {{baseUrl}}/api/moderation-model
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.

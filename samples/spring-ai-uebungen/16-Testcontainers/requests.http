@@ -1,0 +1,19 @@
+@baseUrl = http://localhost:8096
+
+### TestcontainerServiceController
+POST {{baseUrl}}/api/testcontainer-service
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### DynamicConnectionController
+POST {{baseUrl}}/api/dynamic-connection
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### IntegrationTestController
+POST {{baseUrl}}/api/integration-test
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.

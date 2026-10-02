@@ -1,0 +1,55 @@
+@baseUrl = http://localhost:8091
+
+### SimpleRagController
+POST {{baseUrl}}/api/simple-rag
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### QuestionAnswerAdvisorController
+POST {{baseUrl}}/api/question-answer-advisor
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### DocumentRetrievalController
+POST {{baseUrl}}/api/document-retrieval
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### QueryTransformationController
+POST {{baseUrl}}/api/query-transformation
+Content-Type: text/plain; charset=UTF-8
+
+Wie konfiguriere ich den Spring AI ChatClient für Ollama?
+
+### QueryExpansionController
+POST {{baseUrl}}/api/query-expansion
+Content-Type: text/plain; charset=UTF-8
+
+Wie konfiguriere ich den Spring AI ChatClient für Ollama?
+
+### DocumentReaderController
+POST {{baseUrl}}/api/document-reader
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### DocumentTransformerController
+POST {{baseUrl}}/api/document-transformer
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### DocumentWriterController
+POST {{baseUrl}}/api/document-writer
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### EtlPipelineController
+POST {{baseUrl}}/api/etl-pipeline
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.

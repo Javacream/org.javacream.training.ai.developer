@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:8083
+
+### PromptController
+POST {{baseUrl}}/api/prompt
+Content-Type: text/plain; charset=UTF-8
+
+Dependency Injection
+
+### MessageRolesController
+POST {{baseUrl}}/api/message-roles
+Content-Type: text/plain; charset=UTF-8
+
+Dependency Injection
+
+### PromptTemplateController
+POST {{baseUrl}}/api/prompt-template
+Content-Type: text/plain; charset=UTF-8
+
+Dependency Injection
+
+### SystemPromptTemplateController
+POST {{baseUrl}}/api/system-prompt-template
+Content-Type: text/plain; charset=UTF-8
+
+Dependency Injection
+
+### ResourcePromptController
+POST {{baseUrl}}/api/resource-prompt
+Content-Type: text/plain; charset=UTF-8
+
+Dependency Injection
+
+### TemplateRendererController
+POST {{baseUrl}}/api/template-renderer
+Content-Type: text/plain; charset=UTF-8
+
+Dependency Injection

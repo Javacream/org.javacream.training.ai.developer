@@ -1,0 +1,31 @@
+@baseUrl = http://localhost:8094
+
+### ChatClientObservabilityController
+POST {{baseUrl}}/api/chat-client-observability
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### ModelObservabilityController
+POST {{baseUrl}}/api/model-observability
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### AdvisorObservabilityController
+POST {{baseUrl}}/api/advisor-observability
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### VectorStoreObservabilityController
+POST {{baseUrl}}/api/vector-store-observability
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### PromptLoggingController
+POST {{baseUrl}}/api/prompt-logging
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.

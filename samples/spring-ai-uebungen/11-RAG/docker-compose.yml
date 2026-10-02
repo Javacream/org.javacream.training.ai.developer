@@ -1,0 +1,27 @@
+services:
+  cassandra:
+    image: cassandra:5.0.6
+    ports:
+      - "9042:9042"
+    environment:
+      CASSANDRA_CLUSTER_NAME: SpringAiTraining
+      CASSANDRA_DC: datacenter1
+      MAX_HEAP_SIZE: 2G
+      HEAP_NEWSIZE: 512M
+    volumes:
+      - cassandra-data:/var/lib/cassandra
+    healthcheck:
+      test: ["CMD-SHELL", "cqlsh -e 'SELECT release_version FROM system.local'"]
+      interval: 15s
+      timeout: 10s
+      retries: 30
+      start_period: 60s
+  cassandra-init:
+    image: cassandra:5.0.6
+    profiles: ["init"]
+    depends_on:
+      cassandra:
+        condition: service_healthy
+    entrypoint: ["cqlsh", "cassandra", "-e", "CREATE KEYSPACE IF NOT EXISTS spring_ai WITH replication = {'class':'SimpleStrategy','replication_factor':1};"]
+volumes:
+  cassandra-data:

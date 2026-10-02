@@ -1,0 +1,55 @@
+@baseUrl = http://localhost:8081
+
+### SimpleChatController
+POST {{baseUrl}}/api/simple-chat
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### FluentApiController
+POST {{baseUrl}}/api/fluent-api
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### ChatResponseController
+POST {{baseUrl}}/api/chat-response
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### EntityResponseController
+POST {{baseUrl}}/api/entity-response
+Content-Type: text/plain; charset=UTF-8
+
+Nenne drei Filme von Tom Hanks.
+
+### StreamingChatController
+POST {{baseUrl}}/api/streaming-chat
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### PromptParameterController
+POST {{baseUrl}}/api/prompt-parameter
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### MessageMetadataController
+POST {{baseUrl}}/api/message-metadata
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### ChatClientDefaultsController
+POST {{baseUrl}}/api/chat-client-defaults
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
+
+### ChatClientMutationController
+POST {{baseUrl}}/api/chat-client-mutation
+Content-Type: text/plain; charset=UTF-8
+
+Erkläre Spring AI in einem Satz.
