@@ -1,4 +1,4 @@
-package org.javacream.training.spring.ai.mcp;
+package org.javacream.training.spring.ai.mcp.chat;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.mcp.SyncMcpToolCallbackProvider;
@@ -29,7 +29,7 @@ public class McpToolsController {
 		var tools = provider.getIfAvailable();
 		if (tools == null)
 			throw new org.springframework.web.server.ResponseStatusException(
-					org.springframework.http.HttpStatus.SERVICE_UNAVAILABLE, "Profil mcp-client benötigt");
+					org.springframework.http.HttpStatus.SERVICE_UNAVAILABLE, "Mit ChatApplication starten");
 		return chatClient.prompt().user(message).tools(tools).call().content();
 	}
 

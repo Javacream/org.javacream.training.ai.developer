@@ -1,16 +1,11 @@
-package org.javacream.training.spring.ai.mcp;
+package org.javacream.training.spring.ai.mcp.server;
 
-import org.springframework.ai.mcp.annotation.McpArg;
-import org.springframework.ai.mcp.annotation.McpPrompt;
-import org.springframework.ai.mcp.annotation.McpResource;
-import org.springframework.ai.mcp.annotation.McpTool;
-import org.springframework.ai.mcp.annotation.McpToolParam;
 import org.springframework.stereotype.Component;
-
+import org.springframework.ai.mcp.annotation.*;
 import io.modelcontextprotocol.spec.McpSchema;
 
 @Component
-public class TrainingMcpFeatures {
+public class McpTools {
 	@McpTool(name = "add", description = "Add two integer numbers")
 	public int add(@McpToolParam(description = "First number") int a,
 			@McpToolParam(description = "Second number") int b) {

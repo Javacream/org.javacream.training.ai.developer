@@ -1,36 +1,37 @@
-# 10-MCP
+# 10-MCP: drei Applications
 
-Eigenständiges Maven-Projekt. Referenz: [https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html).
-Spring AI 2.0.1, Spring Boot 4.0.3, Java 17+, Swagger UI.
+Unter org.javacream.training.spring.ai.mcp liegen die Unterpakete chat, server und client. Jede Application scannt nur ihr eigenes Unterpaket und aktiviert ihre Konfiguration automatisch.
 
-## Start
+| Paket | Application | Port | Aufgabe |
+|---|---|---|---|
+| server | ServerApplication | 8090 | MCP-Server und lokale REST-Demos |
+| client | ClientApplication | 8190 | MCP-Discovery, Resources, Prompts; ohne Modellanbindung |
+| chat | ChatApplication | 8290 | ChatClient, Ollama und eigener MCP-Client |
 
-1. `requirements.md` beachten.
-2. `mvn clean test` (Kompilierung; keine AI-Aufrufe).
-3. `mvn spring-boot:run`.
-4. Swagger UI: http://localhost:8090/swagger-ui.html
+## Start in drei Terminals
 
-Arbeitsaufträge stehen in `exercises.md`, passende Beispielaufrufe in `requests.http`.
+Server zuerst starten. Keine zusätzlichen Profile angeben.
 
-String-Requests als `text/plain` senden. Swagger zeigt die Parameter und Body-Typen.
-Für Filmography-Ausgaben z.B. „Nenne drei Filme von Tom Hanks“ verwenden.
+```bash
+mvn spring-boot:run -Dapplication.mainClass=org.javacream.training.spring.ai.mcp.server.ServerApplication
+```
 
-## Übungen
+```bash
+mvn spring-boot:run -Dapplication.mainClass=org.javacream.training.spring.ai.mcp.client.ClientApplication
+```
 
-| Controller | Endpoint | Lernziel |
-|---|---|---|
-| `McpClientController` | `GET /api/mcp-client` | McpClient |
-| `McpResourcesController` | `GET /api/mcp-resources` | McpResources |
-| `McpPromptsController` | `POST /api/mcp-prompts` | McpPrompts |
-| `McpToolsController` | `POST /api/mcp-tools` | McpTools |
-| `McpServerToolsController` | `GET /api/mcp-server-tools` | REST-Einstieg zur annotierten MCP-Funktion; über /mcp mit Profil mcp-server verfügbar |
-| `McpServerResourcesController` | `GET /api/mcp-server-resources` | REST-Einstieg zur annotierten MCP-Funktion; über /mcp mit Profil mcp-server verfügbar |
-| `McpAnnotationsController` | `POST /api/mcp-annotations` | REST-Einstieg zur annotierten MCP-Funktion; über /mcp mit Profil mcp-server verfügbar |
+```bash
+mvn spring-boot:run
+```
 
-Server in Terminal 1: `mvn spring-boot:run -Dspring-boot.run.profiles=mcp-server` (Port 8090).
-Client in Terminal 2: `mvn spring-boot:run -Dspring-boot.run.profiles=mcp-client` (Port 8190).
-Die Client-Controller erst nach Start des Servers nutzen. REST-Server-Controller sind direkte Einstiege; MCP verwendet zusätzlich den Streamable-HTTP-Transport unter `/mcp`.
+Standard ist ChatApplication. Alternativ in der IDE die jeweilige main-Methode starten.
 
-## Arbeitsauftrag
+Server: /mcp, /api/mcp-server-tools, /api/mcp-server-resources, /api/mcp-annotations.
+Client: /api/mcp-client, /api/mcp-resources, /api/mcp-prompts.
+Chat: /api/mcp-tools.
 
-Für jeden Controller: Implementierung lesen, Endpoint ausführen und Eingaben variieren. Antwort, Metadaten oder Seiteneffekte überprüfen. Anschließend eine kleine fachliche Erweiterung selbst implementieren. Jeder Controller enthält eine ausführbare Beispielimplementierung; externe Infrastruktur ist Voraussetzung für die entsprechenden Aufrufe.
+Swagger UI jeweils unter http://localhost:<port>/swagger-ui.html. requests.http enthält passende URLs.
+
+Die Server-REST-Demos rufen Java-Funktionen direkt auf. Client und Chat nutzen MCP zu localhost:8090/mcp. Nur Chat benötigt Ollama mit llama3.2. Der Proxy kann über OLLAMA_BASE_URL=http://localhost:11435 verwendet werden; seine Weboberfläche bleibt auf 9082.
+
+mvn package erstellt standardmäßig ein Chat-JAR. Mit -Dapplication.mainClass=<Klassenname> kann ein anderer Einstiegspunkt paketiert werden.
