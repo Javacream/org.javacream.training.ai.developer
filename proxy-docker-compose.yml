@@ -1,0 +1,30 @@
+services:
+  proxy:
+    image: mitmproxy/mitmproxy:latest
+    network_mode: host
+
+    environment:
+      PYTHONUNBUFFERED: "1"
+
+    command:
+      - mitmweb
+      - --mode
+      - reverse:http://127.0.0.1:11434
+      - --listen-host
+      - 127.0.0.1
+      - --listen-port
+      - "11435"
+      - --web-host
+      - 127.0.0.1
+      - --web-port
+      - "9082"
+      - --set
+      - web_open_browser=false
+      - --set
+      - web_password=training
+      - --set
+      - stream_large_bodies=1
+      - --set
+      - store_streamed_bodies=true
+
+    restart: unless-stopped
