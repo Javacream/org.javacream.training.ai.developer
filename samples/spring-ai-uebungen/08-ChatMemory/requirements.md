@@ -7,4 +7,4 @@
 - Kein externer API-Key erforderlich. Modellaufrufe benötigen lokal genügend RAM.
 - Modellnamen lassen sich über `OLLAMA_CHAT_MODEL` ändern; Eigenschaften des Modells beeinflussen die Ergebnisse.
 
-Docker Engine / Docker Desktop mit Compose v2. Cassandra 5 wird über `docker compose up -d --wait` gestartet. Port 9042 muss frei sein. Mindestens 4 GB RAM für Cassandra einplanen. Anschließend `docker compose run --rm cassandra-init`. Daten bleiben in einem Docker-Volume erhalten.
+<!--Docker Engine / Docker Desktop mit Compose v2. Cassandra 5 wird über `docker compose up -d --wait` gestartet. Port 9042 muss frei sein. Mindestens 4 GB RAM für Cassandra einplanen. Anschließend `docker compose run --rm cassandra-init`. Daten bleiben in einem Docker-Volume erhalten.-->

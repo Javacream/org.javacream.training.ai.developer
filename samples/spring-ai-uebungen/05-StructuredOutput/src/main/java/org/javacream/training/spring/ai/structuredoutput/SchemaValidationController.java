@@ -1,4 +1,5 @@
 package org.javacream.training.spring.ai.structuredoutput;
+
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,13 +13,16 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RequestMapping("/api/schema-validation")
 @Tag(name = "SchemaValidation")
 public class SchemaValidationController {
- private final ChatClient chatClient;
- 
- public SchemaValidationController(ChatClient chatClient) { this.chatClient = chatClient;  }
- @PostMapping
- @Operation(summary = "SchemaValidation", description = "SchemaValidation mit Spring AI und Ollama")
- public Object execute(@RequestBody String message) {
- return chatClient.prompt().user(message).call().entity(Filmography.class, spec -> spec.validateSchema());
- }
- 
+	private final ChatClient chatClient;
+
+	public SchemaValidationController(ChatClient chatClient) {
+		this.chatClient = chatClient;
+	}
+
+	@PostMapping
+	@Operation(summary = "SchemaValidation", description = "SchemaValidation mit Spring AI und Ollama")
+	public Object execute(@RequestBody String message) {
+		return chatClient.prompt().user(message).call().entity(Filmography.class, spec -> spec.validateSchema());
+	}
+
 }

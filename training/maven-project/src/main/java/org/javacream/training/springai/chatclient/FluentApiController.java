@@ -1,4 +1,6 @@
 package org.javacream.training.springai.chatclient;
+import java.util.List;
+
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,4 +1,5 @@
 package org.javacream.training.spring.ai.models;
+
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,13 +13,18 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RequestMapping("/api/transcription-model")
 @Tag(name = "TranscriptionModel")
 public class TranscriptionModelController {
- private final ChatClient chatClient;
- 
- public TranscriptionModelController(ChatClient chatClient) { this.chatClient = chatClient;  }
- @PostMapping
- @Operation(summary = "TranscriptionModel", description = "Provider-Grenze: dieser dedizierte Model-Typ ist mit dem Ollama-Adapter nicht verfügbar")
- public Object execute(@RequestBody String message) {
- throw new org.springframework.web.server.ResponseStatusException(org.springframework.http.HttpStatus.NOT_IMPLEMENTED, "TranscriptionModel: kein dedizierter Spring-AI-Ollama-Adapter. Siehe requirements.md.");
- }
- 
+	private final ChatClient chatClient;
+
+	public TranscriptionModelController(ChatClient chatClient) {
+		this.chatClient = chatClient;
+	}
+
+	@PostMapping
+	@Operation(summary = "TranscriptionModel", description = "Provider-Grenze: dieser dedizierte Model-Typ ist mit dem Ollama-Adapter nicht verfügbar")
+	public Object execute(@RequestBody String message) {
+		throw new org.springframework.web.server.ResponseStatusException(
+				org.springframework.http.HttpStatus.NOT_IMPLEMENTED,
+				"TranscriptionModel: kein dedizierter Spring-AI-Ollama-Adapter. Siehe requirements.md.");
+	}
+
 }

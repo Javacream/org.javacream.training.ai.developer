@@ -25,13 +25,14 @@ public class ToolCallbackController {
 	@PostMapping
 	@Operation(summary = "ToolCallback", description = "ToolCallback mit Spring AI und Ollama")
 	public Object execute(@RequestBody String message) {
-		var tool = FunctionToolCallback.builder("actuals", this::callback)
-				.description("actual time").build();
+		var tool = FunctionToolCallback.builder("actuals", this::callback).description("actual time").build();
 		return chatClient.prompt().user(message).tools(tool).call().content();
 	}
+
 	public Date callback() {
 		return new Date();
 	}
+
 	public record Numbers(int a, int b) {
 	}
 }

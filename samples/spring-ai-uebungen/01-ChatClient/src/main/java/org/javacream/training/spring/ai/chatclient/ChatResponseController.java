@@ -1,4 +1,5 @@
 package org.javacream.training.spring.ai.chatclient;
+
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,13 +13,16 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RequestMapping("/api/chat-response")
 @Tag(name = "ChatResponse")
 public class ChatResponseController {
- private final ChatClient chatClient;
- 
- public ChatResponseController(ChatClient chatClient) { this.chatClient = chatClient;  }
- @PostMapping
- @Operation(summary = "ChatResponse", description = "ChatResponse mit Spring AI und Ollama")
- public Object execute(@RequestBody String message) {
- return chatClient.prompt().user(message).call().chatResponse();
- }
- 
+	private final ChatClient chatClient;
+
+	public ChatResponseController(ChatClient chatClient) {
+		this.chatClient = chatClient;
+	}
+
+	@PostMapping
+	@Operation(summary = "ChatResponse", description = "ChatResponse mit Spring AI und Ollama")
+	public Object execute(@RequestBody String message) {
+		return chatClient.prompt().user(message).call().chatResponse();
+	}
+
 }

@@ -1,4 +1,5 @@
 package org.javacream.training.spring.ai.responsemetadata;
+
 import java.util.Map;
 
 import org.springframework.ai.chat.client.ChatClient;
@@ -14,13 +15,17 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RequestMapping("/api/generation-metadata")
 @Tag(name = "GenerationMetadata")
 public class GenerationMetadataController {
- private final ChatClient chatClient;
- 
- public GenerationMetadataController(ChatClient chatClient) { this.chatClient = chatClient;  }
- @PostMapping
- @Operation(summary = "GenerationMetadata", description = "GenerationMetadata mit Spring AI und Ollama")
- public Object execute(@RequestBody String message) {
- return chatClient.prompt().user(message).call().chatResponse().getResults().stream().map(g -> Map.of("text",g.getOutput().getText(), "metadata",g.getMetadata())).toList();
- }
- 
+	private final ChatClient chatClient;
+
+	public GenerationMetadataController(ChatClient chatClient) {
+		this.chatClient = chatClient;
+	}
+
+	@PostMapping
+	@Operation(summary = "GenerationMetadata", description = "GenerationMetadata mit Spring AI und Ollama")
+	public Object execute(@RequestBody String message) {
+		return chatClient.prompt().user(message).call().chatResponse().getResults().stream()
+				.map(g -> Map.of("text", g.getOutput().getText(), "metadata", g.getMetadata())).toList();
+	}
+
 }
