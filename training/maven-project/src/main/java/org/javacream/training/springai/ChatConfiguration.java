@@ -1,4 +1,4 @@
-package org.javacream.training.springai.chatclient;
+package org.javacream.training.springai;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

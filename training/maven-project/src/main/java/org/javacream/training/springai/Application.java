@@ -1,4 +1,4 @@
-package org.javacream.training.springai.chatclient;
+package org.javacream.training.springai;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication

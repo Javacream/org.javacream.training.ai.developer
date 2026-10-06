@@ -1,4 +1,5 @@
-package org.javacream.training.springai.chatclient;
+package org.javacream.training.springai.apps.geography;
+
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,16 +10,16 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-@RequestMapping("/api/chat-clientresponse")
-@Tag(name = "ChatClientResponse")
-public class ChatClientResponseController {
+@RequestMapping("/api/geography")
+@Tag(name = "Geography")
+public class GeographyController {
  private final ChatClient chatClient;
  
- public ChatClientResponseController(ChatClient chatClient) { this.chatClient = chatClient;  }
+ public GeographyController(ChatClient chatClient) { this.chatClient = chatClient;  }
  @PostMapping
- @Operation(summary = "ChatClientResponse", description = "ChatClientResponse mit Spring AI und Ollama")
+ @Operation(summary = "GeographyResponse", description = "Geografie als Java Record; Request z.B. 5 Städte Deutschlands")
  public Object execute(@RequestBody String message) {
- return chatClient.prompt().user(message).call().chatClientResponse();
+ return chatClient.prompt().user(message).call().entity(Geography.class);
  }
  
 }
