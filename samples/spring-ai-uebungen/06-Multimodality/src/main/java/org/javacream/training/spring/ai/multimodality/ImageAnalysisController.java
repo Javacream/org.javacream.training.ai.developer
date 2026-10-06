@@ -2,6 +2,7 @@ package org.javacream.training.spring.ai.multimodality;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.core.io.ByteArrayResource;
+import org.springframework.http.MediaType;
 import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +24,7 @@ public class ImageAnalysisController {
 		this.chatClient = chatClient;
 	}
 
-	@PostMapping
+	@PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	@Operation(summary = "ImageAnalysis", description = "ImageAnalysis mit Spring AI und Ollama")
 	public Object execute(@RequestParam(defaultValue = "Beschreibe das Bild.") String message,
 			@RequestPart MultipartFile image) {
