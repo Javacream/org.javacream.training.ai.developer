@@ -2,6 +2,7 @@ package org.javacream.training.springai.apps.capitals;
 
 import java.util.Map;
 
+import org.javacream.training.springai.tools.WeatherTool;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.prompt.PromptTemplate;
@@ -32,7 +33,7 @@ public class CapitalControllerPlain {
 			this.chatClient = builder.defaultSystem("""
 					Antworte immer auf Deutsch.
 					Verwende deutsche Länder- und Städtenamen.
-					Behalte die JSON-Attributnamen country und capital unverändert bei.
+					Behalte die JSON-Attributnamen country, capital und weather unverändert bei.
 					""").defaultAdvisors(new SimpleLoggerAdvisor()).build();
 		}
 
@@ -45,7 +46,7 @@ public class CapitalControllerPlain {
 			String userPrompt = promptTemplate
 					.render(Map.of("country", country.strip(), "format", converter.getFormat()));
 
-			String response = chatClient.prompt().user(userPrompt).call().content();
+			String response = chatClient.prompt().user(userPrompt).tools(new WeatherTool()).call().content();
 
 			CapitalResponse result = converter.convert(response);
 
@@ -58,6 +59,6 @@ public class CapitalControllerPlain {
 			return result;
 		}
 
-	public record CapitalResponse(String country, String capital) {
+	public record CapitalResponse(String country, String capital, String actualWeather) {
 	}
 }
